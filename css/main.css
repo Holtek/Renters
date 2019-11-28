@@ -160,3 +160,60 @@ body {
   color: var(--mainWhite);
   text-decoration: none;
 }
+/* Gallery */
+.gallery-btn {
+  background: transparent;
+  border: 1px solid var(--mainDark);
+  border-radius: 5px;
+  transition: all 0.25s;
+}
+.gallery-btn:hover {
+  background: var(--mainGreen);
+  color: var(--mainWhite);
+  border: none;
+}
+.gallery-img-container {
+  position: relative;
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+.gallery-img-container:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.gallery-img {
+  transition: all 0.5s linear;
+}
+.gallery-img-container:hover .gallery-img {
+  opacity: 0.3;
+}
+.gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: var(--mainGreen);
+  transform: translate(-50%, 100%);
+  color: var(--mainWhite);
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+.gallery-info:hover {
+  text-decoration: none;
+  color: var(--mainDark);
+}
+.gallery-img-container:hover .gallery-info {
+  transform: translate(-50%, 0%);
+}
+.gallery-icon {
+  position: absolute;
+  color: var(--mainWhite);
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.gallery-img-container:hover .gallery-icon {
+  opacity: 1;
+}
